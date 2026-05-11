@@ -266,21 +266,32 @@ Cidadão360
     |-- Preferências
 ```
 
-## Ideia para o Figma
 
-No Figma, as telas principais podem seguir a mesma estrutura do MVP:
-
-- tela inicial;
-- dashboard;
-- lista de serviços;
-- formulário de solicitação;
-- protocolo;
-- abertura de empresa;
-- pagamentos;
-- consulta pública;
-- transparência;
-- perfil.
 
 ## Frase Final do Pitch
 
 > Com o Cidadão360, a prefeitura fica na palma da mão do cidadão: menos burocracia, mais transparência e serviços públicos mais eficientes.
+
+## Imagens do Projeto
+
+Algumas imagens/mockups usados para mostrar melhor a ideia visual do Cidadão360:
+
+![Tela do Cidadão360 1](img/cidadãobeta1_0_011.png)
+
+![Tela do Cidadão360 2](img/cidadãobeta1_0_012.png)
+
+![Tela do Cidadão360 3](img/cidadãobeta1_0_013.png)
+
+![Tela do Cidadão360 4](img/cidadãobeta1_0_014.png)
+
+![Tela do Cidadão360 5](img/cidadãobeta1_0_015.png)
+
+![Tela do Cidadão360 6](img/cidadãobeta2_0_021.png)
+
+![Tela do Cidadão360 7](img/cidadãobeta2_0_022.png)
+
+![Tela do Cidadão360 8](img/cidadãobeta2_0_023.png)
+
+![Tela do Cidadão360 9](img/cidadãobeta2_0_024.png)
+
+![Tela do Cidadão360 10](img/cidadãobeta2_0_025.png)
