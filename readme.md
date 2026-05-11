@@ -1,54 +1,137 @@
 # Cidadão360
 
-MVP GovTech para aproximar cidadãos e prefeitura por meio de um portal digital simples, transparente e acessível.
+O **Cidadão360** é um projeto de startup GovTech criado para a P2. A ideia é simples: juntar em um só lugar alguns serviços que normalmente fazem o cidadão perder tempo, como abrir solicitação na prefeitura, acompanhar protocolo, consultar taxas, participar de consulta pública e ver dados de transparência.
 
-O projeto permite consultar serviços públicos, abrir uma solicitação simulada, acompanhar protocolo, visualizar indicadores de transparência, iniciar abertura de empresa, gerar guias de taxas municipais, participar de consulta pública e acessar um perfil de cidadão com dados fictícios.
+O projeto foi feito como um **MVP funcional em Laravel**, com telas navegáveis e dados simulados. Nesta primeira versão, a intenção não é ter um sistema completo com banco de dados real, e sim mostrar a proposta funcionando para o pitch.
 
-## Alterações adicionadas para cumprir melhor o tema GovTech
+## Tema Escolhido
 
-O enunciado destaca quatro oportunidades dentro de tecnologia para governos: transparência, votação eletrônica segura, abertura de empresas e pagamento de impostos. Para cobrir esses pontos, o MVP recebeu os seguintes módulos:
+**GovTech: Tecnologia para Governos**
 
-- Transparência pública ampliada: indicadores gerais, demandas por bairro, serviços mais solicitados, tempo médio por serviço, satisfação do cidadão e auditoria pública simulada.
-- Abertura de empresa digital: tela própria com pré-cadastro, checklist de documentos, etapas do processo e geração de protocolo empresarial simulado.
-- Pagamentos e taxas: tela para IPTU, alvará, licença municipal e taxa de coleta, com geração de guia fictícia.
-- Consulta pública: votação simulada sobre prioridades do bairro, resultado parcial e hash de auditoria para explicar uma possível evolução com blockchain.
-
-Essas alterações deixam o Cidadão360 mais completo como GovTech, porque o app não fica limitado a chamados urbanos. Ele também aborda desburocratização, participação cidadã, transparência e arrecadação digital.
-
-## Objetivo da P2
-
-Entregar um pitch de startup com:
-
-- MVP de app funcional, com front-end executável e sem necessidade de banco de dados.
-- Projeto no Figma.
-- Wireframe.
-- Mapa de personas.
-- Arquitetura da informação.
-- Área de atuação definida.
-
-## Área de Atuação
-
-GovTech, com foco em serviços públicos digitais municipais.
+Esse tema fala sobre usar tecnologia para melhorar serviços públicos, deixar processos mais transparentes e diminuir burocracias. Por isso, o Cidadão360 foi pensado como um portal digital entre o cidadão e a prefeitura.
 
 ## Problema
 
-Cidadãos perdem tempo tentando descobrir onde solicitar serviços públicos, quais documentos são necessários e como acompanhar o andamento de pedidos.
+Hoje muitos serviços públicos ainda são confusos ou muito manuais. O cidadão nem sempre sabe:
 
-Do lado da prefeitura, demandas chegam por muitos canais diferentes, dificultando organização, priorização e transparência.
+- onde pedir um serviço;
+- quais documentos precisa enviar;
+- como acompanhar um protocolo;
+- onde consultar taxas;
+- como participar de decisões públicas;
+- se a prefeitura está resolvendo as demandas.
+
+Do lado da prefeitura, também existe dificuldade para organizar pedidos, acompanhar prazos e mostrar dados para a população.
 
 ## Solução
 
-O Cidadão360 centraliza serviços públicos municipais em um único app. O cidadão pode consultar serviços, abrir solicitações, acompanhar protocolos, iniciar abertura de empresa, gerar guias de taxas, votar em consultas públicas e ver indicadores públicos.
+A solução proposta é um portal chamado **Cidadão360**, onde o cidadão consegue:
 
-Para a prefeitura, a plataforma organiza demandas e gera dados para tomada de decisão.
+- consultar serviços públicos;
+- abrir solicitações;
+- acompanhar protocolos;
+- simular abertura de empresa;
+- consultar e gerar guias de taxas;
+- participar de uma consulta pública;
+- ver indicadores de transparência.
+
+Assim, o projeto mostra como a tecnologia pode ajudar a prefeitura a atender melhor e o cidadão a acompanhar tudo com mais clareza.
+
+## O que foi melhorado para cumprir o tema GovTech
+
+Depois de analisar melhor o enunciado, o projeto foi ampliado para não ficar só em chamados urbanos. Foram adicionadas partes que têm mais relação com GovTech:
+
+### 1. Transparência Pública
+
+Foi criada uma área com indicadores simulados, como:
+
+- solicitações abertas;
+- solicitações concluídas;
+- tempo médio de atendimento;
+- demandas por bairro;
+- serviços mais solicitados;
+- satisfação do cidadão;
+- auditoria pública simulada.
+
+Isso ajuda a mostrar a parte de **plataforma de transparência**.
+
+### 2. Abertura de Empresa
+
+Foi adicionada uma tela de **abertura de empresa digital**, com:
+
+- pré-cadastro;
+- atividade econômica;
+- responsável legal;
+- bairro de funcionamento;
+- etapas do processo;
+- checklist de documentos;
+- protocolo empresarial simulado.
+
+Essa parte atende diretamente a ideia de **desburocratizar a abertura de empresas**.
+
+### 3. Pagamentos e Taxas
+
+Também foi criada uma tela para simular pagamentos públicos, com:
+
+- IPTU;
+- alvará de funcionamento;
+- licença municipal;
+- taxa de coleta;
+- geração de guia fictícia.
+
+Essa funcionalidade conversa com a parte do tema que fala sobre **pagamento de impostos e taxas**.
+
+### 4. Consulta Pública
+
+Foi criada uma consulta pública simulada, onde o cidadão vota em uma prioridade para o bairro. A tela mostra:
+
+- opções de votação;
+- resultado parcial;
+- quantidade de votos;
+- hash de auditoria simulado.
+
+O hash serve para explicar no pitch que, em uma versão futura, essa votação poderia usar **blockchain** para aumentar segurança e transparência.
 
 ## Pitch Resumido
 
-O Cidadão360 é uma plataforma GovTech que coloca a prefeitura na palma da mão do cidadão. Nosso MVP permite consultar serviços públicos, abrir solicitações como iluminação pública, buracos na rua, coleta de lixo e emissão de documentos, além de acompanhar cada pedido por protocolo. Também inclui abertura de empresa, pagamentos de taxas, consulta pública com voto simulado e painel de transparência.
+O Cidadão360 é uma plataforma GovTech que coloca a prefeitura mais perto do cidadão. Pelo sistema, é possível consultar serviços, abrir solicitações, acompanhar protocolos, iniciar abertura de empresa, gerar guias de taxas e participar de consultas públicas.
 
-Com isso, reduzimos burocracia, aumentamos a transparência e ajudamos a gestão pública a responder melhor às necessidades da população.
+A proposta é diminuir burocracia, aumentar a transparência e facilitar o atendimento público usando tecnologia.
 
-## Stack
+## Telas do MVP
+
+O MVP tem as seguintes telas:
+
+- tela inicial;
+- dashboard do cidadão;
+- lista de serviços;
+- formulário de nova solicitação;
+- acompanhamento de protocolo;
+- abertura de empresa;
+- pagamentos e taxas;
+- consulta pública;
+- transparência pública;
+- perfil do cidadão.
+
+## Rotas Principais
+
+```text
+GET  /                         Tela inicial
+GET  /dashboard                Dashboard do cidadão
+GET  /servicos                 Lista de serviços
+GET  /solicitacoes/nova        Formulário de solicitação
+POST /solicitacoes             Gera protocolo simulado
+GET  /empresas/abertura        Abertura de empresa
+POST /empresas/abertura        Gera protocolo empresarial
+GET  /pagamentos               Taxas e guias simuladas
+GET  /consulta-publica         Consulta pública
+POST /consulta-publica/votar   Registra voto simulado
+GET  /protocolos/{id}          Acompanhamento de protocolo
+GET  /transparencia            Indicadores públicos
+GET  /perfil                   Perfil do usuário
+```
+
+## Tecnologias Usadas
 
 - Laravel 13
 - Laravel Sail
@@ -57,56 +140,15 @@ Com isso, reduzimos burocracia, aumentamos a transparência e ajudamos a gestão
 - Vite
 - Tailwind CSS 4
 - PHPUnit
-- PostgreSQL, Redis e Mailpit configurados no Sail para evolução futura
 
-## Telas Implementadas
+O projeto também já tem PostgreSQL, Redis e Mailpit configurados no Docker, pensando em uma evolução futura.
 
-- Tela inicial
-- Dashboard do cidadão
-- Lista de serviços
-- Formulário de nova solicitação
-- Acompanhamento de protocolo
-- Transparência pública
-- Abertura de empresa
-- Pagamentos e taxas
-- Consulta pública com voto simulado
-- Perfil do cidadão
+## Como Rodar o Projeto
 
-## Rotas
-
-```text
-GET  /                    Tela inicial
-GET  /dashboard           Dashboard do cidadão
-GET  /servicos            Lista de serviços
-GET  /solicitacoes/nova   Formulário de solicitação
-POST /solicitacoes        Gera protocolo simulado
-GET  /empresas/abertura   Pré-cadastro de empresa
-POST /empresas/abertura   Gera protocolo empresarial simulado
-GET  /pagamentos          Taxas e guias simuladas
-GET  /consulta-publica    Consulta pública
-POST /consulta-publica/votar Registra voto simulado
-GET  /protocolos/{id}     Acompanhamento do protocolo
-GET  /transparencia       Indicadores públicos
-GET  /perfil              Perfil do usuário
-```
-
-## Como Rodar com Sail
-
-Suba os containers:
+Com Docker e Sail:
 
 ```bash
 ./vendor/bin/sail up -d
-```
-
-Rode as migrations se quiser preparar o banco para evolução futura:
-
-```bash
-./vendor/bin/sail artisan migrate
-```
-
-Inicie o Vite:
-
-```bash
 ./vendor/bin/sail npm run dev
 ```
 
@@ -116,40 +158,24 @@ Acesse:
 http://localhost:8095
 ```
 
-Mailpit:
-
-```text
-http://localhost:8026
-```
-
-## Como Rodar sem Docker
-
-Instale dependências:
+Sem Docker:
 
 ```bash
 composer install
 npm install
-```
-
-Rode o build:
-
-```bash
 npm run build
-```
-
-Inicie o servidor:
-
-```bash
 php artisan serve --port=8095
 ```
 
 ## Testes
 
+Para rodar os testes:
+
 ```bash
 php artisan test
 ```
 
-Ou com Sail:
+Com Sail:
 
 ```bash
 ./vendor/bin/sail artisan test
@@ -159,42 +185,32 @@ Ou com Sail:
 
 ```text
 app/Http/Controllers/CidadaoController.php
-resources/views/layouts/app.blade.php
+routes/web.php
 resources/views/home.blade.php
 resources/views/dashboard.blade.php
 resources/views/servicos/index.blade.php
 resources/views/solicitacoes/create.blade.php
 resources/views/protocolos/show.blade.php
-resources/views/transparencia/index.blade.php
 resources/views/empresas/abertura.blade.php
 resources/views/pagamentos/index.blade.php
 resources/views/consulta-publica/index.blade.php
+resources/views/transparencia/index.blade.php
 resources/views/perfil/show.blade.php
-routes/web.php
 ```
 
 ## Personas
 
 ### Maria, cidadã comum
 
-- Idade: 42 anos.
-- Profissão: comerciante.
-- Objetivo: resolver problemas do bairro sem ir à prefeitura.
-- Dores: falta de tempo, dificuldade para saber onde solicitar serviços e pouca transparência.
+Maria tem 42 anos e trabalha como comerciante. Ela quer resolver problemas do bairro sem precisar ir até a prefeitura. O app ajuda porque ela consegue abrir solicitação e acompanhar o protocolo pelo celular.
 
 ### João, servidor público
 
-- Idade: 35 anos.
-- Profissão: atendente da prefeitura.
-- Objetivo: organizar melhor as demandas recebidas.
-- Dores: muitos pedidos por telefone, papelada e dificuldade em priorizar chamados.
+João tem 35 anos e trabalha no atendimento da prefeitura. Ele precisa organizar melhor os pedidos que chegam por telefone, papel e atendimento presencial. O Cidadão360 ajuda centralizando as demandas.
 
 ### Ana, gestora pública
 
-- Idade: 50 anos.
-- Cargo: secretária municipal de administração.
-- Objetivo: melhorar a eficiência dos serviços públicos.
-- Dores: falta de dados para tomada de decisão e baixa satisfação da população.
+Ana tem 50 anos e trabalha na gestão municipal. Ela precisa de dados para tomar decisões melhores. A área de transparência ajuda a enxergar quais bairros e serviços precisam de mais atenção.
 
 ## Arquitetura da Informação
 
@@ -250,21 +266,21 @@ Cidadão360
     |-- Preferências
 ```
 
-## Figma e Wireframe
+## Ideia para o Figma
 
-Telas recomendadas para o Figma:
+No Figma, as telas principais podem seguir a mesma estrutura do MVP:
 
-- Splash ou tela inicial.
-- Dashboard.
-- Lista de serviços.
-- Formulário de solicitação.
-- Tela de protocolo.
-- Abertura de empresa.
-- Pagamentos e taxas.
-- Consulta pública.
-- Transparência.
-- Perfil.
+- tela inicial;
+- dashboard;
+- lista de serviços;
+- formulário de solicitação;
+- protocolo;
+- abertura de empresa;
+- pagamentos;
+- consulta pública;
+- transparência;
+- perfil.
 
-Frase final do pitch:
+## Frase Final do Pitch
 
 > Com o Cidadão360, a prefeitura fica na palma da mão do cidadão: menos burocracia, mais transparência e serviços públicos mais eficientes.
