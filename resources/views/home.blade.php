@@ -64,7 +64,7 @@
 
                             <div class="grid grid-cols-2 gap-3">
                                 @foreach ($servicos as $servico)
-                                    <a href="{{ route('solicitacoes.create', ['servico' => $servico['nome']]) }}" class="rounded-lg border border-slate-200 bg-white p-3 text-sm font-black text-slate-800 shadow-sm transition hover:border-teal-600 hover:text-teal-800">
+                                    <a href="{{ isset($servico['rota']) ? route($servico['rota']) : route('solicitacoes.create', ['servico' => $servico['nome']]) }}" class="rounded-lg border border-slate-200 bg-white p-3 text-sm font-black text-slate-800 shadow-sm transition hover:border-teal-600 hover:text-teal-800">
                                         {{ $servico['nome'] }}
                                     </a>
                                 @endforeach
@@ -72,6 +72,30 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="border-t border-slate-200 bg-stone-50">
+        <div class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+            <div class="max-w-3xl">
+                <p class="text-sm font-black uppercase tracking-wide text-teal-700">Mais aderente ao tema GovTech</p>
+                <h2 class="mt-2 text-3xl font-black text-slate-950">Transparência, desburocratização e participação cidadã.</h2>
+            </div>
+
+            <div class="mt-6 grid gap-4 md:grid-cols-3">
+                <a href="{{ route('empresas.abertura') }}" class="rounded-lg border border-slate-200 bg-white p-5 transition hover:border-teal-600 hover:shadow-md">
+                    <h3 class="text-lg font-black text-slate-950">Abertura de empresa</h3>
+                    <p class="mt-2 text-sm leading-6 text-slate-600">Pré-cadastro digital com etapas, documentos e protocolo.</p>
+                </a>
+                <a href="{{ route('pagamentos.index') }}" class="rounded-lg border border-slate-200 bg-white p-5 transition hover:border-teal-600 hover:shadow-md">
+                    <h3 class="text-lg font-black text-slate-950">Pagamentos e taxas</h3>
+                    <p class="mt-2 text-sm leading-6 text-slate-600">Guias simuladas para IPTU, alvará, licença e coleta.</p>
+                </a>
+                <a href="{{ route('consulta-publica.index') }}" class="rounded-lg border border-slate-200 bg-white p-5 transition hover:border-teal-600 hover:shadow-md">
+                    <h3 class="text-lg font-black text-slate-950">Consulta pública</h3>
+                    <p class="mt-2 text-sm leading-6 text-slate-600">Voto simulado com hash para demonstrar auditoria e blockchain futuro.</p>
+                </a>
             </div>
         </div>
     </section>

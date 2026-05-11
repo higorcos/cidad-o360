@@ -62,8 +62,20 @@
                     <h2 class="text-lg font-black text-slate-950">Serviços rápidos</h2>
                     <div class="mt-4 grid gap-2">
                         @foreach ($servicos as $servico)
-                            <a href="{{ route('solicitacoes.create', ['servico' => $servico['nome']]) }}" class="rounded-lg border border-slate-200 px-3 py-3 text-sm font-bold text-slate-700 transition hover:border-teal-600 hover:text-teal-800">
+                            <a href="{{ isset($servico['rota']) ? route($servico['rota']) : route('solicitacoes.create', ['servico' => $servico['nome']]) }}" class="rounded-lg border border-slate-200 px-3 py-3 text-sm font-bold text-slate-700 transition hover:border-teal-600 hover:text-teal-800">
                                 {{ $servico['nome'] }}
+                            </a>
+                        @endforeach
+                    </div>
+                </section>
+
+                <section class="rounded-lg border border-slate-200 bg-white p-5">
+                    <h2 class="text-lg font-black text-slate-950">Módulos GovTech</h2>
+                    <div class="mt-4 grid gap-3">
+                        @foreach ($govtechCards as $card)
+                            <a href="{{ route($card['rota']) }}" class="rounded-lg bg-stone-50 p-4 transition hover:bg-teal-50">
+                                <p class="text-sm font-black text-slate-950">{{ $card['titulo'] }}</p>
+                                <p class="mt-1 text-sm leading-5 text-slate-600">{{ $card['descricao'] }}</p>
                             </a>
                         @endforeach
                     </div>

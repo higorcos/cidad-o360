@@ -50,5 +50,58 @@
                 </div>
             </section>
         </div>
+
+        <div class="mt-8 grid gap-6 lg:grid-cols-[1fr_24rem]">
+            <section class="rounded-lg border border-slate-200 bg-white p-5">
+                <h2 class="text-xl font-black text-slate-950">Tempo médio por serviço</h2>
+                <p class="mt-1 text-sm text-slate-500">Mostra eficiência operacional e ajuda a prefeitura a priorizar filas.</p>
+                <div class="mt-6 space-y-4">
+                    @foreach ($tempoAtendimento as $tempo)
+                        <div>
+                            <div class="flex items-center justify-between gap-3">
+                                <span class="text-sm font-black text-slate-800">{{ $tempo['servico'] }}</span>
+                                <span class="text-sm font-bold text-slate-500">{{ $tempo['tempo'] }} · meta {{ $tempo['meta'] }}</span>
+                            </div>
+                            <div class="mt-2 h-3 rounded-full bg-slate-100">
+                                <div class="h-3 rounded-full bg-amber-500" style="width: {{ $tempo['percentual'] }}%"></div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            </section>
+
+            <section class="rounded-lg border border-slate-200 bg-white p-5">
+                <h2 class="text-xl font-black text-slate-950">Satisfação do cidadão</h2>
+                <div class="mt-6 space-y-4">
+                    @foreach ($satisfacao as $item)
+                        <div>
+                            <div class="flex items-center justify-between gap-3">
+                                <span class="text-sm font-black text-slate-800">{{ $item['rotulo'] }}</span>
+                                <span class="text-sm font-bold text-slate-500">{{ $item['percentual'] }}%</span>
+                            </div>
+                            <div class="mt-2 h-3 rounded-full bg-slate-100">
+                                <div class="h-3 rounded-full bg-teal-600" style="width: {{ $item['percentual'] }}%"></div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            </section>
+        </div>
+
+        <section class="mt-8 rounded-lg border border-slate-200 bg-white p-5">
+            <div class="grid gap-5 lg:grid-cols-[1fr_20rem] lg:items-center">
+                <div>
+                    <p class="text-sm font-black uppercase tracking-wide text-teal-700">Auditoria pública simulada</p>
+                    <h2 class="mt-2 text-xl font-black text-slate-950">{{ $auditoriaConsulta['consulta'] }}</h2>
+                    <p class="mt-2 text-sm leading-6 text-slate-600">{{ $auditoriaConsulta['observacao'] }}</p>
+                </div>
+                <div class="rounded-lg bg-slate-950 p-5 text-white">
+                    <p class="text-sm font-bold text-slate-300">Votos registrados</p>
+                    <p class="mt-2 text-3xl font-black">{{ $auditoriaConsulta['votos'] }}</p>
+                    <p class="mt-4 text-sm font-bold text-slate-300">Hash público</p>
+                    <p class="mt-1 break-all text-lg font-black text-teal-200">{{ $auditoriaConsulta['hash'] }}</p>
+                </div>
+            </div>
+        </section>
     </section>
 @endsection

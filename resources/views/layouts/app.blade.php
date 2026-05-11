@@ -27,6 +27,9 @@
                         <x-nav-link route="dashboard">Início</x-nav-link>
                         <x-nav-link route="servicos.index">Serviços</x-nav-link>
                         <x-nav-link route="solicitacoes.create">Solicitar</x-nav-link>
+                        <x-nav-link route="empresas.abertura">Empresas</x-nav-link>
+                        <x-nav-link route="pagamentos.index">Taxas</x-nav-link>
+                        <x-nav-link route="consulta-publica.index">Consulta</x-nav-link>
                         <x-nav-link route="transparencia.index">Transparência</x-nav-link>
                         <x-nav-link route="perfil.show">Perfil</x-nav-link>
                     </nav>
@@ -45,9 +48,9 @@
                 <div class="mx-auto grid max-w-md grid-cols-5 gap-1 text-center text-[11px] font-bold text-slate-600">
                     <a class="rounded-lg px-2 py-2 {{ request()->routeIs('dashboard') ? 'bg-teal-50 text-teal-800' : '' }}" href="{{ route('dashboard') }}">Início</a>
                     <a class="rounded-lg px-2 py-2 {{ request()->routeIs('servicos.*') ? 'bg-teal-50 text-teal-800' : '' }}" href="{{ route('servicos.index') }}">Serviços</a>
-                    <a class="rounded-lg px-2 py-2 {{ request()->routeIs('solicitacoes.*') ? 'bg-teal-50 text-teal-800' : '' }}" href="{{ route('solicitacoes.create') }}">Solicitar</a>
+                    <a class="rounded-lg px-2 py-2 {{ request()->routeIs('pagamentos.*') ? 'bg-teal-50 text-teal-800' : '' }}" href="{{ route('pagamentos.index') }}">Taxas</a>
+                    <a class="rounded-lg px-2 py-2 {{ request()->routeIs('consulta-publica.*') ? 'bg-teal-50 text-teal-800' : '' }}" href="{{ route('consulta-publica.index') }}">Votar</a>
                     <a class="rounded-lg px-2 py-2 {{ request()->routeIs('transparencia.*') ? 'bg-teal-50 text-teal-800' : '' }}" href="{{ route('transparencia.index') }}">Dados</a>
-                    <a class="rounded-lg px-2 py-2 {{ request()->routeIs('perfil.*') ? 'bg-teal-50 text-teal-800' : '' }}" href="{{ route('perfil.show') }}">Perfil</a>
                 </div>
             </nav>
 

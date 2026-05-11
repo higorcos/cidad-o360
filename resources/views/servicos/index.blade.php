@@ -31,8 +31,8 @@
 
                     <div class="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                         <span class="text-sm font-bold text-slate-500">{{ $servico['prazo'] }}</span>
-                        <a href="{{ route('solicitacoes.create', ['servico' => $servico['nome']]) }}" class="inline-flex h-10 items-center justify-center rounded-lg bg-teal-700 px-4 text-sm font-black text-white transition hover:bg-teal-800">
-                            Solicitar
+                        <a href="{{ isset($servico['rota']) ? route($servico['rota']) : route('solicitacoes.create', ['servico' => $servico['nome']]) }}" class="inline-flex h-10 items-center justify-center rounded-lg bg-teal-700 px-4 text-sm font-black text-white transition hover:bg-teal-800">
+                            {{ isset($servico['rota']) ? 'Acessar' : 'Solicitar' }}
                         </a>
                     </div>
                 </article>

@@ -2,7 +2,18 @@
 
 MVP GovTech para aproximar cidadãos e prefeitura por meio de um portal digital simples, transparente e acessível.
 
-O projeto permite consultar serviços públicos, abrir uma solicitação simulada, acompanhar protocolo, visualizar indicadores de transparência e acessar um perfil de cidadão com dados fictícios.
+O projeto permite consultar serviços públicos, abrir uma solicitação simulada, acompanhar protocolo, visualizar indicadores de transparência, iniciar abertura de empresa, gerar guias de taxas municipais, participar de consulta pública e acessar um perfil de cidadão com dados fictícios.
+
+## Alterações adicionadas para cumprir melhor o tema GovTech
+
+O enunciado destaca quatro oportunidades dentro de tecnologia para governos: transparência, votação eletrônica segura, abertura de empresas e pagamento de impostos. Para cobrir esses pontos, o MVP recebeu os seguintes módulos:
+
+- Transparência pública ampliada: indicadores gerais, demandas por bairro, serviços mais solicitados, tempo médio por serviço, satisfação do cidadão e auditoria pública simulada.
+- Abertura de empresa digital: tela própria com pré-cadastro, checklist de documentos, etapas do processo e geração de protocolo empresarial simulado.
+- Pagamentos e taxas: tela para IPTU, alvará, licença municipal e taxa de coleta, com geração de guia fictícia.
+- Consulta pública: votação simulada sobre prioridades do bairro, resultado parcial e hash de auditoria para explicar uma possível evolução com blockchain.
+
+Essas alterações deixam o Cidadão360 mais completo como GovTech, porque o app não fica limitado a chamados urbanos. Ele também aborda desburocratização, participação cidadã, transparência e arrecadação digital.
 
 ## Objetivo da P2
 
@@ -27,13 +38,13 @@ Do lado da prefeitura, demandas chegam por muitos canais diferentes, dificultand
 
 ## Solução
 
-O Cidadão360 centraliza serviços públicos municipais em um único app. O cidadão pode consultar serviços, abrir solicitações, acompanhar protocolos e ver indicadores públicos.
+O Cidadão360 centraliza serviços públicos municipais em um único app. O cidadão pode consultar serviços, abrir solicitações, acompanhar protocolos, iniciar abertura de empresa, gerar guias de taxas, votar em consultas públicas e ver indicadores públicos.
 
 Para a prefeitura, a plataforma organiza demandas e gera dados para tomada de decisão.
 
 ## Pitch Resumido
 
-O Cidadão360 é uma plataforma GovTech que coloca a prefeitura na palma da mão do cidadão. Nosso MVP permite consultar serviços públicos, abrir solicitações como iluminação pública, buracos na rua, coleta de lixo e emissão de documentos, além de acompanhar cada pedido por protocolo.
+O Cidadão360 é uma plataforma GovTech que coloca a prefeitura na palma da mão do cidadão. Nosso MVP permite consultar serviços públicos, abrir solicitações como iluminação pública, buracos na rua, coleta de lixo e emissão de documentos, além de acompanhar cada pedido por protocolo. Também inclui abertura de empresa, pagamentos de taxas, consulta pública com voto simulado e painel de transparência.
 
 Com isso, reduzimos burocracia, aumentamos a transparência e ajudamos a gestão pública a responder melhor às necessidades da população.
 
@@ -56,6 +67,9 @@ Com isso, reduzimos burocracia, aumentamos a transparência e ajudamos a gestão
 - Formulário de nova solicitação
 - Acompanhamento de protocolo
 - Transparência pública
+- Abertura de empresa
+- Pagamentos e taxas
+- Consulta pública com voto simulado
 - Perfil do cidadão
 
 ## Rotas
@@ -66,6 +80,11 @@ GET  /dashboard           Dashboard do cidadão
 GET  /servicos            Lista de serviços
 GET  /solicitacoes/nova   Formulário de solicitação
 POST /solicitacoes        Gera protocolo simulado
+GET  /empresas/abertura   Pré-cadastro de empresa
+POST /empresas/abertura   Gera protocolo empresarial simulado
+GET  /pagamentos          Taxas e guias simuladas
+GET  /consulta-publica    Consulta pública
+POST /consulta-publica/votar Registra voto simulado
 GET  /protocolos/{id}     Acompanhamento do protocolo
 GET  /transparencia       Indicadores públicos
 GET  /perfil              Perfil do usuário
@@ -147,6 +166,9 @@ resources/views/servicos/index.blade.php
 resources/views/solicitacoes/create.blade.php
 resources/views/protocolos/show.blade.php
 resources/views/transparencia/index.blade.php
+resources/views/empresas/abertura.blade.php
+resources/views/pagamentos/index.blade.php
+resources/views/consulta-publica/index.blade.php
 resources/views/perfil/show.blade.php
 routes/web.php
 ```
@@ -190,16 +212,37 @@ Cidadão360
 |   |-- Documentos
 |   |-- Finanças públicas
 |   |-- Empresas
+|   |-- Consulta pública
 |
 |-- Solicitações
 |   |-- Nova solicitação
 |   |-- Protocolo
 |   |-- Linha do tempo
 |
+|-- Empresas
+|   |-- Pré-cadastro
+|   |-- Checklist de documentos
+|   |-- Protocolo empresarial
+|
+|-- Pagamentos
+|   |-- IPTU
+|   |-- Alvará
+|   |-- Licença municipal
+|   |-- Taxa de coleta
+|   |-- Guia simulada
+|
+|-- Consulta Pública
+|   |-- Voto por prioridade
+|   |-- Resultado parcial
+|   |-- Hash de auditoria
+|
 |-- Transparência
 |   |-- Indicadores
 |   |-- Demandas por bairro
 |   |-- Serviços mais solicitados
+|   |-- Tempo médio de atendimento
+|   |-- Satisfação do cidadão
+|   |-- Auditoria pública simulada
 |
 |-- Perfil
     |-- Dados do usuário
@@ -216,6 +259,9 @@ Telas recomendadas para o Figma:
 - Lista de serviços.
 - Formulário de solicitação.
 - Tela de protocolo.
+- Abertura de empresa.
+- Pagamentos e taxas.
+- Consulta pública.
 - Transparência.
 - Perfil.
 
