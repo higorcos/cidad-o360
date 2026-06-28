@@ -14,6 +14,7 @@ RUN apk add --no-cache \
     supervisor \
     curl \
     sqlite \
+    sqlite-dev \
     libpng-dev \
     libzip-dev \
     zip \
