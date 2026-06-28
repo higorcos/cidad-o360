@@ -36,11 +36,13 @@ ENV COMPOSER_ALLOW_SUPERUSER=1
 WORKDIR /var/www/html
 
 COPY composer.json composer.lock ./
-RUN composer install --no-dev --optimize-autoloader --no-interaction --no-scripts \
-    && composer dump-autoload --no-dev --optimize
+RUN composer install --no-dev --optimize-autoloader --no-interaction --no-scripts
 
 COPY . .
 COPY --from=frontend /app/public/build ./public/build
+
+RUN composer dump-autoload --no-dev --optimize --no-scripts \
+    && php artisan package:discover --ansi
 
 RUN mkdir -p storage/framework/{cache,sessions,views} storage/logs bootstrap/cache \
     && chown -R www-data:www-data storage bootstrap/cache \
