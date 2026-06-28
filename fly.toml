@@ -1,4 +1,4 @@
-app = "cidad-o360"
+app = "cidadao360"
 primary_region = "gru"
 
 [build]
